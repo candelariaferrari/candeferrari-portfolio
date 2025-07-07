@@ -29,7 +29,7 @@ function Projects() {
           <div className="col s12 m6">
             <div className="card">
               <div className="card-content">
-                <span className="card-title">Landing Page</span>
+                <span className="card-title">Landing Page agrohub</span>
                 <p>Landing institucional realizada con HTML, CSS y Materialize.</p>
                 <p><strong>Tecnologías:</strong> HTML, SCSS, Materialize</p>
               </div>
