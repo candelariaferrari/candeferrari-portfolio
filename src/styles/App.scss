@@ -1,49 +1,46 @@
+@import "./variables";
+@import "./mixins";
 body {
-  
-//background-color: #F5F5F5;
+  transition: background-color 0.3s, color 0.3s;
   margin: 0px;
   padding: 0px;
+  font-family: 'Inter', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+}
+//  MODO CLARO
 body.light {
-  background-color: #ffffff;
-  color: #111;
+  background-color: $light-bg;
+  color: $text-light-mode;
+
+  .navbar {
+    background-color: $light-bg;
+    color: $text-light;
+  }
+
+  a {
+    color: $primary;
+  }
 }
 
+//MODO OSCURO
 body.dark {
-  background-color: #121212;
-  color: red;
-}
+  background-color: $bg-dark;
+  color: $text-dark-mode;
 
-/* NAVBAR */
-.dark-nav {
-  background-color: #212121;
-  height: 64px;
-  display: flex;
-  align-items: center;
-
-  .logo-circle {
-    background-color: #FFB300;
-    color: #212121;
-    font-weight: bold;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    font-size: 1rem;
+  .navbar {
+    background-color: $nav-dark;
+    color: $text-dark;
   }
 
-  a, span, i {
-    color: #fff !important;
-    font-weight: 500;
-  }
-
-  li {
-    margin-left: 15px;
+  a {
+    color: $accent;
   }
 }
+   
+
 
 .nav-link {
   color: #fff;
@@ -92,5 +89,18 @@ body.dark {
       padding: 0.3rem 0;
       font-weight: 500;
     }
+  }
+}
+
+.card {
+  @include soft-shadow;
+  @include flex-center;
+  @include transition(all);
+
+  padding: 1rem;
+  background-color: $light-bg;
+
+  @include respond-to(sm) {
+    flex-direction: column;
   }
 }

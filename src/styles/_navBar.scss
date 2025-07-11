@@ -1,0 +1,126 @@
+@import "./variables";
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: $light-bg;
+  color: $text-light;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  transition: background-color 0.3s ease, color 0.3s ease;
+
+  a,
+  button {
+    margin-left: 1rem;
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+
+    &:hover {
+      opacity: 0.8;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0; // que quede justo abajo del texto
+      left: 0;
+      width: 0%;
+      height: 2px;
+      background-color: $accent;
+      transition: width 0.3s ease;
+    }
+    
+  }
+  .logo {
+    font-weight: bold;
+    font-size: 1.1rem;
+    background-color: $accent;
+    color: black !important;
+    border-radius: 50%;
+    padding: 1rem;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  transition: transform 0.4s ease;
+    // Evita que se le aplique underline o hover
+    &::after {
+      display: none !important;
+    }
+    &:hover {
+     // transform: rotate(6deg) scale(1.05);
+      transform: scale(1.1);
+    }
+  
+  }
+
+  &.dark {
+    background-color: $dark-bg;
+    color: $text-dark;
+
+    a,
+    button {
+      color: $text-dark;
+    }
+
+    .logo {
+      background-color: $accent;
+      color: black;
+    }
+  }
+
+  .navbar-center {
+    display: flex;
+    gap: 1.5rem;
+  
+    a:not(.logo) {
+      position: relative;
+      font-weight: 500;
+      transition: color 0.3s ease;
+      line-height: 25px;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0; // ajustado
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: $accent;
+        transition: width 0.3s ease;
+        z-index: 10;
+      }
+  
+      &:hover {
+        color: $accent;
+  
+        &::after {
+          width: 100%;
+        }
+      }
+  
+      &.active {
+        color: $accent;
+  
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+  
+  
+
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+}

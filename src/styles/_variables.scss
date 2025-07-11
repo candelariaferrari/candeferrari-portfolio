@@ -1,0 +1,20 @@
+
+$primary: #006064;  // verde petróleo
+$secondary: #CFD8DC; // gris claro
+$accent: #FFB300;  // mostaza
+
+$dark-bg: #121212;
+$light-bg: #ffffff;
+
+$text-dark: #F5F5F5;       // texto claro sobre fondo oscuro
+$text-light: #111111;      // texto oscuro sobre fondo claro
+
+// modo claro
+$bg-light: $light-bg;
+$text-light-mode: $text-light;
+$nav-light: $secondary;
+
+// modo oscuro
+$bg-dark: $dark-bg;
+$text-dark-mode: $text-dark;
+$nav-dark: $primary;

@@ -1,5 +1,10 @@
 {
-    "greeting": "Hola, soy Cande",
+    "hi": "Hola, soy Cande!",
+    "nav": {
+      "home": "Inicio",
+      "projects": "Proyectos",
+      "contact": "Contacto"
+    },
     "projects": "Proyectos",
     "contact": "Contacto",
     "toggle_theme": "Modo Claro/Oscuro",

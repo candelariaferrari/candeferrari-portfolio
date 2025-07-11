@@ -1,7 +1,8 @@
-import yoImg from '../images/yo.png'; 
+import yoImg from '../images/yo.png';
 import { motion } from "framer-motion";
 
 import { useTranslation } from "react-i18next";
+import Skills from './Skills';
 
 function AboutCard() {
   const { t } = useTranslation();
@@ -24,42 +25,14 @@ function AboutCard() {
 
         {/* INFO */}
         <div className="col s12 m7" style={{ padding: '2rem' }}>
-          <h5 className="teal-text text-darken-4">{t('greeting')}</h5>
+          <h5 className="teal-text text-darken-4">{t('hi')}</h5>
           <p>
             Soy desarrolladora frontend con más de 4 años de experiencia, especializada en Angular, Ionic y Wordpress.
             Vivo en Jesús María - Córdoba con mi pareja y mi hija de dos años. Me apasiona crear interfaces funcionales y accesibles.
             Me considero responsable, autodidacta y con muchas ganas de seguir creciendo. Estoy aprendiendo React y buscando nuevos desafíos.
           </p>
 
-          <h6 className="amber-text text-darken-2" style={{ marginTop: '1.5rem' }}>Skills</h6>
-          <div className="row">
-            <div className="col s6 m4">
-              <ul>
-                <li>Angular</li>
-                <li>Ionic</li>
-                <li>GitHub</li>
-                <li>React</li>
-                <li>HTML</li>
-                <li>CSS</li>
-              </ul>
-            </div>
-            <div className="col s6 m4">
-              <ul>
-                <li>SCSS</li>
-                <li>JavaScript</li>
-                <li>Wordpress</li>
-                <li>Bootstrap</li>
-                <li>Materialize</li>
-                <li>Flexbox</li>
-              </ul>
-            </div>
-            <div className="col s12 m4">
-              <ul>
-                <li>Adobe Illustrator</li>
-                <li>Adobe Photoshop</li>
-              </ul>
-            </div>
-          </div>
+         <Skills></Skills>
         </div>
       </div>
     </section>
