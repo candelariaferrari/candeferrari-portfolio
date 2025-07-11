@@ -1,0 +1,45 @@
+// 🎯 Centrado rápido (flexbox)
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // 🎯 Centrado columna
+  @mixin flex-column-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  // 📱 Responsive (mobile-first)
+  @mixin respond-to($breakpoint) {
+    @if $breakpoint == xs {
+      @media (max-width: 480px) { @content; }
+    } @else if $breakpoint == sm {
+      @media (max-width: 768px) { @content; }
+    } @else if $breakpoint == md {
+      @media (max-width: 1024px) { @content; }
+    } @else if $breakpoint == lg {
+      @media (max-width: 1280px) { @content; }
+    }
+  }
+  
+  // 🧱 Sombra suave
+  @mixin soft-shadow {
+    box-shadow: 5px 4px 12px rgba(49, 49, 49, 0.228);
+  }
+  
+  // ✨ Transición común
+  @mixin transition($props...) {
+    transition: $props 0.3s ease;
+  }
+  
+  // 🎨 Texto truncado
+  @mixin truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  

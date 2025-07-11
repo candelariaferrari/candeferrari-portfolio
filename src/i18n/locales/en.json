@@ -1,0 +1,13 @@
+{
+    "hi": "Hi, I'm Cande",
+    "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+    "projects": "Projects",
+    "contact": "Contact",
+    "toggle_theme": "Toggle Theme",
+    "language": "Language"
+  }
+  
