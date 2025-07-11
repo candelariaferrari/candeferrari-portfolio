@@ -1,5 +1,11 @@
+import WrapperAnimation from "../components/WrapperAnimation";
 function Contact() {
-    return <h1>Bienvenida a CONTACT</h1>;
+    return (
+      <WrapperAnimation>
+      <h1>Bienvenida a CONTACT</h1>;
+      </WrapperAnimation>
+    )
+ 
   }
   
   export default Contact;
