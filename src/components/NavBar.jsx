@@ -1,7 +1,10 @@
 import { NavLink } from "react-router-dom";
 import ThemeToggle from './ThemeToggle';
+import { useTranslation } from "react-i18next";
+import LanguageToggle from "./LanguageToggle";
 
 function Navbar() {
+  const { t } = useTranslation();
   return (
     <nav className="nav-wrapper dark-nav">
       <div className="container">
@@ -16,7 +19,7 @@ function Navbar() {
           <li><NavLink to="/projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} >Proyectos</NavLink></li>
           <li><NavLink to="/contact" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>Contacto</NavLink></li>
           <li><ThemeToggle /></li>
-          <li><span>ES</span></li>
+          <LanguageToggle />
         </ul>
       </div>
     </nav>

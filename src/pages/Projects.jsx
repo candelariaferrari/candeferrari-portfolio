@@ -19,6 +19,7 @@ function Projects() {
                 </div>
                 <div className="card-action">
                   <div className="card-action">
+                    
                     <a href="https://github.com/tu-usuario/todo-app" target="_blank" rel="noreferrer">GitHub</a>
                     <a href="https://todoapp-candelariaferrari.netlify.app" target="_blank" rel="noreferrer">
                       Ver online
@@ -37,7 +38,7 @@ function Projects() {
                   <p><strong>Tecnologías:</strong> HTML, SCSS, Materialize</p>
                 </div>
                 <div className="card-action">
-                  <a href="https://github.com/tu-usuario/landing-page" target="_blank">GitHub</a>
+                  <a href="https://github.com/tu-usuario/landing-page" target="_blank" rel="noreferrer">GitHub</a>
                 </div>
               </div>
             </div>

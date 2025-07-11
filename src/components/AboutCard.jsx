@@ -1,6 +1,10 @@
 import yoImg from '../images/yo.png'; 
 import { motion } from "framer-motion";
+
+import { useTranslation } from "react-i18next";
+
 function AboutCard() {
+  const { t } = useTranslation();
   return (
     <section className="about-header section">
       <div className="container row" style={{ display: 'flex', flexWrap: 'wrap' }}>
@@ -20,7 +24,7 @@ function AboutCard() {
 
         {/* INFO */}
         <div className="col s12 m7" style={{ padding: '2rem' }}>
-          <h5 className="teal-text text-darken-4">¡Hola, Soy Cande!</h5>
+          <h5 className="teal-text text-darken-4">{t('greeting')}</h5>
           <p>
             Soy desarrolladora frontend con más de 4 años de experiencia, especializada en Angular, Ionic y Wordpress.
             Vivo en Jesús María - Córdoba con mi pareja y mi hija de dos años. Me apasiona crear interfaces funcionales y accesibles.

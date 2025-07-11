@@ -1,24 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { ThemeContext } from "../context/ThemeContext";
+import { FaSun, FaMoon } from "react-icons/fa";
 
-function ThemeToggle() {
-  const [darkMode, setDarkMode] = useState(false);
-
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.add("dark-mode");
-    } else {
-      document.body.classList.remove("dark-mode");
-    }
-  }, [darkMode]);
+const ThemeToggle = () => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
-    <button 
-      onClick={() => setDarkMode(!darkMode)}>
-      <i className="material-icons">
-        {darkMode ? "light_mode" : "dark_mode"}
-      </i>
+    <button onClick={toggleTheme} className="theme-toggle">
+      {theme === "light" ? <FaMoon /> : <FaSun />}
     </button>
   );
-}
+};
 
 export default ThemeToggle;
