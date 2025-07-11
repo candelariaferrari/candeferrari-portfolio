@@ -38,6 +38,13 @@ body.dark {
   a {
     color: $accent;
   }
+  .button-theme-color {
+    background-color: $light-bg;
+    color: $text-light;
+  }
+  .button-lang-toggle {
+    color: $text-dark;
+  }
 }
    
 
