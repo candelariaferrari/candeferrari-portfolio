@@ -4,19 +4,20 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Skills from './Skills';
 
+import "../styles/_about.scss";      
 function AboutCard() {
   const { t } = useTranslation();
   return (
     <section className="about-header section">
-      <div className="container row" style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div className="row" style={{ display: 'flex', flexWrap: 'wrap', width:'95%' }}>
 
         {/* FOTO */}
-        <div className="col s12 m5">
+        <div className="col s12 m4">
           <motion.img
             src={yoImg}
             alt="Candelaria Ferrari"
             className="responsive-img z-depth-2"
-            style={{ borderRadius: "12px" }}
+            style={{ borderRadius: "12px", width:"90%" }}
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -24,7 +25,7 @@ function AboutCard() {
         </div>
 
         {/* INFO */}
-        <div className="col s12 m7" style={{ padding: '2rem' }}>
+        <div className="col s12 m8" style={{ padding: '2rem' }}>
           <h5 className="teal-text text-darken-4">{t('hi')}</h5>
           <p>
             Soy desarrolladora frontend con más de 4 años de experiencia, especializada en Angular, Ionic y Wordpress.
@@ -35,7 +36,9 @@ function AboutCard() {
          <Skills></Skills>
         </div>
       </div>
+      
     </section>
+   
   );
 }
 
