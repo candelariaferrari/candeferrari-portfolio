@@ -3,7 +3,10 @@
   align-items: flex-start;
   gap: 3rem;
 }
-
+.teal-text.text-darken-4{
+  padding: 0px;
+  margin-top: -1rem;
+}
 .image-container {
   flex: 1;
   max-width: 380px;
@@ -36,6 +39,16 @@
 
 /* 📱 MOBILE (≤768px) */
 @media (max-width: 768px) {
+  .section{
+    overflow-x: hidden !important;
+    width: 100vw;
+  }
+  .about-header{
+    margin: auto;
+    .responsive-img{
+      width: 100% !important;
+    }
+  }
   .about-row {
     flex-direction: column;
     text-align: center;
@@ -57,7 +70,9 @@
   .skill-category {
     margin-bottom: 2rem;
   }
-
+  .skill-title{
+    text-align: center;
+  }
   .skills-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr); /* 3 columnas de iconos */

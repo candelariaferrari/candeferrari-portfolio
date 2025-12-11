@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       {/* <div className="vertical-line"></div> */}
-      <NavBar />
+      <NavBar /> 
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/projects" element={<Projects />} />
