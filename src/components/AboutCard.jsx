@@ -26,7 +26,7 @@ function AboutCard() {
 
         {/* INFO */}
         <div className="col s12 m8" style={{ padding: '0rem' }}>
-          <h5 className="teal-text text-darken-4">{t('hi')}</h5>
+          <h3 className="teal-text text-darken-4 text-shadow">{t('hi')}</h3>
           <p>
             Soy desarrolladora frontend con más de 4 años de experiencia, especializada en Angular, Ionic y Wordpress.
             Vivo en Jesús María - Córdoba con mi pareja y mi hija de dos años. Me apasiona crear interfaces funcionales y accesibles.

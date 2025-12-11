@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef, useEffect } from "react";
+import { motion, useScroll, useMotionValueEvent  } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "../styles/_experience.scss";
 
@@ -7,49 +7,68 @@ const jobs = [
     {
         title: "Frontend Developer",
         company: "Agrohub",
-        period: "2020 - Actualidad",
-        description: "Diseño y desarrollo de interfaces en Angular y Ionic, creando experiencias rápidas y escalables. Participación en el diseño UX/UI y en la producción de piezas visuales para redes. Trabajo en optimización de componentes, mejora de la performance y construcción de soluciones alineadas al negocio agro.",
+        period: "Septiembre 2020 - Actualidad",
+        description:
+            "Diseño y desarrollo de interfaces en Angular e Ionic, creando experiencias rápidas y escalables. Participación en el diseño UX/UI, optimización de performance y desarrollo de soluciones alineadas al negocio agro.",
     },
     {
         title: "Frontend Developer",
         company: "Pagos 360",
-        period: "2022",
-        description: "Desarrollo de interfaces web con Angular y maquetación de nuevos flujos y funcionalidades del producto. Implementación de landing pages y sitios institucionales en WordPress, siguiendo buenas prácticas de SEO, accesibilidad y consistencia visual.",
+        period: "Abril 2022 - Septiembre 2022",
+        description:
+            "Desarrollo de interfaces web con Angular, maquetación de flujos, creación de landings SEO-friendly y optimización de accesibilidad.",
     },
     {
         title: "Tutora",
         company: "Coder House",
-        period: "2020",
-        description: "Acompañamiento académico a estudiantes del curso de Desarrollo Web: corrección de trabajos prácticos, resolución de dudas técnicas y guía personalizada para mejorar sus proyectos. Generación de feedback constructivo para acelerar su aprendizaje y comprensión de las tecnologías base (HTML, CSS, JS).",
+        period: "Abril 2020 - Octubre 2020",
+        description:
+            "Acompañamiento a estudiantes, corrección de proyectos, feedback técnico y guía de aprendizaje en HTML, CSS y JavaScript.",
     },
     {
         title: "Diseñadora Gráfica",
         company: "Combo Marketing y Diseño",
         period: "2019 - 2020",
-        description: "Co-fundadora de un estudio de diseño dedicado a la creación de identidades visuales, piezas para redes sociales y proyectos gráficos completos para emprendimientos y marcas. Participación en el proceso completo: conceptualización, diseño, branding y entrega final al cliente.",
+        description:
+            "Co-fundadora de estudio de diseño, branding, identidad visual y desarrollo de piezas digitales completas.",
     },
 ];
 
-export default function ExperienceTimeline() {
+
+ export default function ExperienceTimeline() {
+    const containerRef = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: containerRef,
+        offset: ["start 0.5", "end 0.9"],
+    });
+
     return (
         <div className="timelineWrapper">
-            <div className="timelineContainer">
-                <motion.div
-                    className="timelineLine"
-                    initial={{ height: 0 }}
-                    whileInView={{ height: "100%" }}
-                    transition={{ duration: 1, ease: "easeOut" }}
-                />
+            <div className="timelineContainer" ref={containerRef}>
 
+             
+                <div className="timelineLine" />
+
+              
+                <motion.div
+                    className="timelineProgress"
+                    style={{
+                        scaleY: scrollYProgress,
+                        transformOrigin: "top",
+                    }}
+                />
+              
                 {jobs.map((job, idx) => (
-                    <TimelineItem key={idx} job={job} index={idx} />
+                    <TimelineItem key={idx} job={job} index={idx} progress={scrollYProgress.get()} />
                 ))}
+
             </div>
         </div>
     );
 }
 
-function TimelineItem({ job, index }) {
+function TimelineItem({ job }) {
     const { ref, inView } = useInView({
         triggerOnce: false,
         threshold: 0.2,
@@ -59,30 +78,78 @@ function TimelineItem({ job, index }) {
         <motion.div
             ref={ref}
             className="item"
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ?
-                { opacity: 1, y: 0 } :
-                { opacity: 0, y: 30 }
-            }
-            transition={{ duration: 0.6, ease: "easeOut" }}
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
         >
-            {/* PERÍODO (izquierda) */}
-            <span className="period teal-text">{job.period}</span>
-
-            {/* Punto animado */}
+        
             <motion.div
                 className="point"
                 initial={{ scale: 0 }}
-                animate={inView ? { scale: 1 } : {}}
-                transition={{ duration: 0.3, delay: index * 0.1 + 0.1 }}
+                animate={inView ? { scale: 1 } : { scale: 0 }}
+                transition={{ duration: 0.3 }}
             />
 
-            {/* Texto */}
             <div className="textContent">
                 <h3 className="title">{job.title}</h3>
                 <h4 className="company">{job.company}</h4>
+                <p className="period">{job.period}</p>
                 <p className="description">{job.description}</p>
             </div>
         </motion.div>
     );
-}
+} 
+/*  function TimelineItem({ job, index, progress }) {
+    const { ref, inView } = useInView({
+        triggerOnce: false,
+        threshold: 0.2,
+    });
+
+    // 1) Ref para obtener la posición del punto
+    const pointRef = useRef(null);
+
+    // 2) Estado que indica si el punto debe encenderse
+    const [active, setActive] = React.useState(index === 0);
+
+    // 3) Efecto que compara scrollYProgress con la posición del punto
+    useEffect(() => {
+        if (!pointRef.current) return;
+
+        const pointTop = pointRef.current.getBoundingClientRect().top;
+        const windowHeight = window.innerHeight;
+
+        // Si el punto está dentro del área donde ya pasó la línea →
+        // lo activamos
+        if (pointTop < windowHeight * progress) {
+            setActive(true);
+        }
+    }, [progress]);
+
+    return (
+        <motion.div
+            ref={ref}
+            className="item"
+            initial={{ opacity: 0, x: -20 }}
+            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+        >
+         
+            <motion.div
+                ref={pointRef}
+                className={`point ${active ? "active" : ""} ${index === 0 ? "start" : ""
+                    }`}
+                initial={{ scale: 0 }}
+                animate={inView ? { scale: 1 } : { scale: 0 }}
+                transition={{ duration: 0.3 }}
+            />
+
+            <div className="textContent">
+                <h3 className="title">{job.title}</h3>
+                <h4 className="company">{job.company}</h4>
+                <p className="period">{job.period}</p>
+                <p className="description">{job.description}</p>
+            </div>
+        </motion.div>
+    );
+} */
+

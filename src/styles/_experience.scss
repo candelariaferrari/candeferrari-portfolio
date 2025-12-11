@@ -1,121 +1,129 @@
+@import "./variables";
+
 .timelineWrapper {
   width: 100%;
   display: flex;
   justify-content: center;
+  padding: 2rem;
 }
 
 .timelineContainer {
   position: relative;
-  padding: 0px;
-  width: 100%;
-  max-width: 95%;
+  width: 900px;
+  margin: auto;
 }
 
-/* Línea vertical animada */
+/* ---- LÍNEAS ---- */
+
+/* Línea base (gris), va DETRÁS */
 .timelineLine {
   position: absolute;
-  left: 50%;
+  left: 40px; // distancia desde la izquierda
   top: 0;
   width: 3px;
-  background: #dcdcdc;
-  transform: translateX(-50%);
+  height: 100%;
+  background: #d3d3d3;
   border-radius: 3px;
+  z-index: 1; // detrás de todo
 }
 
-/* ITEM */
+/* Línea animada (violeta) encima de la gris */
+.timelineProgress {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: $primary;
+  border-radius: 3px;
+  transform-origin: top;
+  z-index: 2;
+}
+
+/* ---- ITEMS ---- */
+
 .item {
-  display: grid;
-  grid-template-columns: 1fr 40px 1fr;
-  align-items: flex-start;
-  margin: 50px 0;
   position: relative;
-  opacity: 0;
-}
-
-/* PERÍODO (izquierda) */
-.period {
-  text-align: right;
-  padding-right: 20px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  width: 100%;
+  padding-left: 100px; // SEPARA LAS CARDS DE LA LÍNEA
+  margin-bottom: 80px;
+  z-index: 5; // cards encima de la línea
 }
 
 /* Punto */
 .point {
-  width: 25px;
-  height: 25px;
-  background: #e0e0e0;
-  border-radius: 50%;
+  position: absolute;
+  left: 26px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  background: $accent;
   border: 3px solid white;
-  z-index: 2;
-  justify-self: center;
-  box-shadow: 0 0 4px #f9b21d;
-}
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-shadow: 0px 0px 4px $accent;
+} 
 
-/* Contenido del job */
+
+
+
+
+
+/* ---- CONTENIDO DE LA CARD ---- */
+
 .textContent {
-  padding-left: 20px;
+  background: $light-bg;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 13%);
+  border: 1px solid #ffb30084;
 }
 
-/* Título del puesto */
 .title {
-  margin: 0;
   font-size: 1.5rem;
-  font-weight: 600;
-  color: #f9b21d;
+  font-weight: 700;
+  margin: 0px;
+  color: $accent;
+  padding: 0px;
 }
 
-/* Empresa */
 .company {
-  margin: 5px 0;
-  font-size: 1.2rem;
-  color: #004d40;
-  font-weight: 500;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: $primary;
+  margin: 0.5rem 0rem 0rem;
 }
 
-/* Descripción */
-.description {
-  margin: 0;
-  margin-top: 2px;
+.period {
   font-size: 1rem;
-  color: #666;
-  line-height: 1.4;
-  max-width: 460px;
+  color: $dark;
+  font-weight: 500;
+  margin: 0rem 0rem;
+}
+
+.description {
+  font-size: 1.1rem;
+  color: $dark;
+  line-height: 1.5;
+  margin: 0.5rem 0rem;
 }
 
 /* RESPONSIVE */
-@media (max-width: 700px) {
-  .item {
-    grid-template-columns: 1fr 30px 1fr;
-  }
-
-  .period {
-    font-size: 14px;
-  }
-
-  .title {
-    font-size: 17px;
-  }
-
-  .company,
-  .description {
-    font-size: 13px;
-  }
-}
-
-/* 📱 MOBILE (≤768px) */
 @media (max-width: 768px) {
-  .title {
-    font-size: 1.2rem;
+  .timelineContainer {
+    width: 100%;
   }
-  .period{
-    padding-right: 10px;
+
+  .timelineLine,
+  .timelineProgress {
+    left: 25px;
   }
-  .textContent{
-    padding-left: 10px;
+
+  .point {
+    left: 25px;
+  }
+
+  .item {
+    padding-left: 80px;
   }
 }
-
-/* EXTRA SMALL (≤480px) */
-@media (max-width: 480px) {}
