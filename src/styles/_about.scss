@@ -1,5 +1,10 @@
 @import "./variables";
-
+.section{
+  overflow-x: hidden !important;
+  width: 100vw;
+  min-height: 100%;
+  height: auto;   // <- ESTA ES LA CLAVE
+}
 .about-row {
   display: flex;
   align-items: flex-start;
@@ -63,10 +68,7 @@ font-size: 1.1rem;
 
 /* 📱 MOBILE (≤768px) */
 @media (max-width: 768px) {
-  .section{
-    overflow-x: hidden !important;
-    width: 100vw;
-  }
+
   .about-header{
     margin: auto;
     .responsive-img{
@@ -112,7 +114,7 @@ font-size: 1.1rem;
   
   @keyframes typing {
     from { width: 0 }
-    to { width: 245px; }
+    to { width: 255px; }
   }
   .description-text{
     padding: 0rem 1rem;

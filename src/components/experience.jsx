@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useMotionValueEvent  } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import "../styles/_experience.scss";
@@ -38,11 +38,42 @@ const jobs = [
  export default function ExperienceTimeline() {
     const containerRef = useRef(null);
 
+    // Detectar móvil (SSR-safe)
+    const [isMobile, setIsMobile] = useState(false);
+    useEffect(() => {
+      if (typeof window === "undefined") return;
+      const mq = window.matchMedia("(max-width: 768px)");
+      const onChange = () => setIsMobile(mq.matches);
+      onChange();
+      // Compatibilidad: addEventListener en navegadores modernos, fallback a addListener
+      if (mq.addEventListener) mq.addEventListener("change", onChange);
+      else mq.addListener(onChange);
+      return () => {
+        if (mq.removeEventListener) mq.removeEventListener("change", onChange);
+        else mq.removeListener(onChange);
+      };
+    }, []);
+  
+    // offset dinámico según móvil / desktop
+    const offset = isMobile ? ["start 0.5", "end 1"] : ["start 0.5", "end 0.9"];
+  
+    // useScroll con offset dinámico
+    const { scrollYProgress } = useScroll({
+      target: containerRef,
+      offset,
+    });
+  
+    const [progressValue, setProgressValue] = useState(0);
+    useMotionValueEvent(scrollYProgress, "change", (v) => {
+      setProgressValue(v);
+    });
+ /*    const containerRef = useRef(null);
+
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start 0.1", "end 1"],
+        offset: ["start 0.5", "end 0.9"],
     });
-
+ */
     return (
         <div className="timelineWrapper">
             <div className="timelineContainer" ref={containerRef}>
