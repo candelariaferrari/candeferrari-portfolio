@@ -40,7 +40,7 @@ const jobs = [
 
     const { scrollYProgress } = useScroll({
         target: containerRef,
-        offset: ["start 0.5", "end 0.9"],
+        offset: ["start 0.1", "end 1"],
     });
 
     return (
