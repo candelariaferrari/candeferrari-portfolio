@@ -7,8 +7,16 @@ body {
   padding: 0px;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
-}
+  min-height: 100%;
+  height: auto; 
 
+}
+.section-body{
+  overflow-x: hidden !important;
+  width: 100%;
+  min-height: 100%;
+  height: auto;   // <- ESTA ES LA CLAVE
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
 }
@@ -24,6 +32,12 @@ body.light {
 
   a {
     color: $primary;
+  }
+  .footer-container{
+    background-color: $primary;
+    text-align: center;
+    padding: 2rem;
+    color: $accent;
   }
 }
 

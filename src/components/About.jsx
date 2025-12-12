@@ -4,7 +4,7 @@ import Footer from './Footer';
 
 function About() {
     return (
-        <section className='section'>
+        <section className='section-body'>
             <AboutCard/>
             <h4 className="teal-text text-darken-4 center" >Experiencia Laboral</h4>
             <Experience />

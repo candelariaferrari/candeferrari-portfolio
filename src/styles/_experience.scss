@@ -5,7 +5,7 @@
   display: flex;
   justify-content: center;
   padding: 2rem;
-  min-height: 100%;
+  min-height: auto;
   height: auto; 
 }
 
@@ -14,6 +14,8 @@
   max-width: 900px;
   width: 100%;
   margin: auto;
+  height: auto;          // ← importante
+  min-height: auto; 
 }
 
 /* ---- LÍNEAS ---- */

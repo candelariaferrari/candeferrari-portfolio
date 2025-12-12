@@ -55,7 +55,7 @@ const jobs = [
     }, []);
   
     // offset dinámico según móvil / desktop
-    const offset = isMobile ? ["start 0.5", "end 1"] : ["start 0.5", "end 0.9"];
+    const offset = isMobile ? ["start 0.2", "end 1.2"] : ["start 0.5", "end 0.9"];
   
     // useScroll con offset dinámico
     const { scrollYProgress } = useScroll({
@@ -67,16 +67,10 @@ const jobs = [
     useMotionValueEvent(scrollYProgress, "change", (v) => {
       setProgressValue(v);
     });
- /*    const containerRef = useRef(null);
 
-    const { scrollYProgress } = useScroll({
-        target: containerRef,
-        offset: ["start 0.5", "end 0.9"],
-    });
- */
     return (
-        <div className="timelineWrapper">
-            <div className="timelineContainer" ref={containerRef}>
+        <div className="timelineWrapper" ref={containerRef}>
+            <div className="timelineContainer" >
 
              
                 <div className="timelineLine" />
@@ -130,57 +124,4 @@ function TimelineItem({ job }) {
         </motion.div>
     );
 } 
-/*  function TimelineItem({ job, index, progress }) {
-    const { ref, inView } = useInView({
-        triggerOnce: false,
-        threshold: 0.2,
-    });
-
-    // 1) Ref para obtener la posición del punto
-    const pointRef = useRef(null);
-
-    // 2) Estado que indica si el punto debe encenderse
-    const [active, setActive] = React.useState(index === 0);
-
-    // 3) Efecto que compara scrollYProgress con la posición del punto
-    useEffect(() => {
-        if (!pointRef.current) return;
-
-        const pointTop = pointRef.current.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-
-        // Si el punto está dentro del área donde ya pasó la línea →
-        // lo activamos
-        if (pointTop < windowHeight * progress) {
-            setActive(true);
-        }
-    }, [progress]);
-
-    return (
-        <motion.div
-            ref={ref}
-            className="item"
-            initial={{ opacity: 0, x: -20 }}
-            animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-        >
-         
-            <motion.div
-                ref={pointRef}
-                className={`point ${active ? "active" : ""} ${index === 0 ? "start" : ""
-                    }`}
-                initial={{ scale: 0 }}
-                animate={inView ? { scale: 1 } : { scale: 0 }}
-                transition={{ duration: 0.3 }}
-            />
-
-            <div className="textContent">
-                <h3 className="title">{job.title}</h3>
-                <h4 className="company">{job.company}</h4>
-                <p className="period">{job.period}</p>
-                <p className="description">{job.description}</p>
-            </div>
-        </motion.div>
-    );
-} */
 

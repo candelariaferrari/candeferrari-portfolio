@@ -1,7 +1,7 @@
 function Footer() {
     return(
-        <section>
-         <p>hecho por cande ferrari</p>   
+        <section className="footer-container">
+         <p>@candeferrari</p>   
         </section>
     )
 }

@@ -1,9 +1,7 @@
 @import "./variables";
-.section{
-  overflow-x: hidden !important;
-  width: 100vw;
-  min-height: 100%;
-  height: auto;   // <- ESTA ES LA CLAVE
+.about-header{
+  padding: 2rem 0rem;
+  position: relative;
 }
 .about-row {
   display: flex;
