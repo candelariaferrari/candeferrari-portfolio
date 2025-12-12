@@ -92,3 +92,8 @@ body.dark {
     flex-direction: column;
   }
 }
+
+/* Hide desktop menu in mobile */
+@media (max-width: 768px)  {
+  
+}

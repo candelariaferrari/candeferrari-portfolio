@@ -21,7 +21,7 @@ const NavBar = () => {
 
   return (
     <nav className={`navbar ${theme}`}>
-      
+
       {/* Left: Logo */}
       <div className="navbar-left">
         <NavLink to="/" className="logo">
@@ -33,7 +33,7 @@ const NavBar = () => {
       <div className={`navbar-center desktop`}>
         <NavLink to="/" end>{t("nav.home")}</NavLink>
         <NavLink to="/projects">{t("nav.projects")}</NavLink>
-        <NavLink to="/contact">{t("nav.contact")}</NavLink>
+        {/*  <NavLink to="/contact">{t("nav.contact")}</NavLink> */}
       </div>
 
       <div className={`navbar-right desktop`}>
@@ -53,25 +53,22 @@ const NavBar = () => {
       </button>
 
       {/* Mobile Dropdown */}
-      <div className={`mobile-menu ${open ? "open" : ""}`}>
+      <div className={`mobile-menu-full ${open ? "open" : ""}`}>
         <NavLink to="/" end onClick={() => setOpen(false)}>
           {t("nav.home")}
         </NavLink>
         <NavLink to="/projects" onClick={() => setOpen(false)}>
           {t("nav.projects")}
         </NavLink>
-        <NavLink to="/contact" onClick={() => setOpen(false)}>
-          {t("nav.contact")}
-        </NavLink>
 
-        <div className="mobile-options">
-          <ThemeToggle />
-          <LanguageToggle />
-          <a href="https://github.com/candelariaferrari" target="_blank" rel="noreferrer">GitHub</a>
-          <a href="https://www.linkedin.com/in/candelariaferrari/" target="_blank" rel="noreferrer">LinkedIn</a>
-        </div>
+        <a href="https://github.com/candelariaferrari" target="_blank" rel="noreferrer" className="a-mobile">GitHub</a>
+        <a href="https://www.linkedin.com/in/candelariaferrari/" target="_blank" rel="noreferrer" className="a-mobile">LinkedIn</a>
+        <ThemeToggle />
+        <LanguageToggle />
+
       </div>
-    </nav>
+    
+    </nav >
   );
 };
 
