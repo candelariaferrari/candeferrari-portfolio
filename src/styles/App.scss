@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./mixins";
 @import "./about";
+
 body {
   transition: background-color 0.3s, color 0.3s;
   margin: 0px;
@@ -8,18 +9,26 @@ body {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   min-height: 100%;
-  height: auto; 
+  height: auto;
 
 }
-.section-body{
+
+.section-body {
   overflow-x: hidden !important;
   width: 100%;
   min-height: 100%;
-  height: auto;   // <- ESTA ES LA CLAVE
+  height: auto; // <- ESTA ES LA CLAVE
 }
-h1, h2, h3, h4, h5, h6 {
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: 'Montserrat', sans-serif;
 }
+
 //  MODO CLARO
 body.light {
   background-color: $light-bg;
@@ -33,7 +42,8 @@ body.light {
   a {
     color: $primary;
   }
-  .footer-container{
+
+  .footer-container {
     background-color: $primary;
     text-align: center;
     padding: 2rem;
@@ -54,15 +64,17 @@ body.dark {
   a {
     color: $accent;
   }
+
   .button-theme-color {
     background-color: $light-bg;
     color: $text-light;
   }
+
   .button-lang-toggle {
     color: $text-dark;
   }
 }
-   
+
 .active {
   background-color: #FFB300;
   color: #212121 !important;
@@ -93,7 +105,17 @@ body.dark {
   }
 }
 
-/* Hide desktop menu in mobile */
-@media (max-width: 768px)  {
-  
+.background-color {
+  background-color: $accent;
+  padding: 2rem 0rem;
+  margin: 2rem 0rem;
+ 
 }
+.text-timeline {
+  color: $primary;
+  font-weight: 700;
+  text-align: center;
+  padding: 1rem 0rem;
+}
+/* Hide desktop menu in mobile */
+@media (max-width: 768px) {}
