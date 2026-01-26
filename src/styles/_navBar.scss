@@ -172,3 +172,119 @@
 
 
 }
+/* Ocultar menú mobile por defecto */
+.mobile-menu {
+  display: none;
+}
+.mobile-menu-btn {
+  display: none;      /* > overlay */
+}
+.mobile-options, .mobile-menu-full {
+  display: none;
+}
+/* Hide desktop menu in mobile */
+@media (max-width: 768px)  {
+  .desktop {
+    display: none !important;
+  }
+
+  .mobile-menu-btn {
+    display: flex !important;
+    position: fixed;
+    top: 0.5rem;
+    right: 2rem;
+    background: none !important;
+    border: none !important;
+    font-size: 1.9rem !important;
+    cursor: pointer !important;
+    z-index: 4000;
+    color: inherit;
+    padding: 1rem;
+  }
+
+  .mobile-menu {
+    position: absolute;
+    top: 100%;
+    right: -100%;   // <-- oculta completamente sin overflow
+    background-color: inherit;
+    width: 70%;
+    max-width: 260px;
+    padding: 1.5rem;
+    border-radius: 0 0 0 12px;
+    box-shadow: -2px 4px 10px rgba(0,0,0,0.15);
+    display: flex !important;
+    flex-direction: column;
+    gap: 0rem !important;
+    transition: right 0.3s ease;
+  }
+
+  .mobile-menu.open {
+    right: 0;
+    transform: translateX(0);
+  }
+  .mobile-menu-full {
+    position: fixed;
+    inset: 0; // ocupar pantalla completa
+    background: #ffffff75; // oscurecer
+    backdrop-filter: blur(12px); // BLUR moderno
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transform: translateY(-100%); 
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    z-index: 2500;
+    overflow-y: auto;
+  }
+
+  .mobile-menu-full.open {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+
+  .mobile-menu-full a,
+  .mobile-menu-full button {
+    font-size: 1.8rem;
+    color: white;
+    text-decoration: none;
+    position: relative;
+    font-weight: 600;
+    transition: color 0.3s ease, transform 0.3s ease;
+
+    &:hover {
+      color: $accent;
+      transform: scale(1.05);
+    }
+  }
+
+  .mobile-options {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0rem !important;
+
+  }
+  .a-mobile{
+    margin: 0rem 1rem 0rem 1rem !important;
+    font-size: 1.8rem !important;
+
+  }
+  .button-lang-toggle {
+    align-items: flex-start !important;
+    justify-content: flex-start !important;
+    font-size: 1.8rem !important;
+    margin: 0px !important;
+    margin-left: 1rem !important;
+    padding: 1.5rem 0rem 0rem!important;
+  }
+    
+  
+}
+
+/* Hide mobile menu button on desktop */
+.mobile-menu-btn {
+  display: none;
+}

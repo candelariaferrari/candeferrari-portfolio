@@ -4,19 +4,20 @@ import { motion } from "framer-motion";
 import { useTranslation } from "react-i18next";
 import Skills from './Skills';
 
+import "../styles/_about.scss";
 function AboutCard() {
   const { t } = useTranslation();
   return (
     <section className="about-header section">
-      <div className="container row" style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div className="row" style={{ display: 'flex', flexWrap: 'wrap', alignItems: "center", width: '95%' }}>
 
         {/* FOTO */}
-        <div className="col s12 m5">
+        <div className="col s12 m4">
           <motion.img
             src={yoImg}
             alt="Candelaria Ferrari"
             className="responsive-img z-depth-2"
-            style={{ borderRadius: "12px" }}
+            style={{ borderRadius: "12px", width: "90%" }}
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -24,18 +25,21 @@ function AboutCard() {
         </div>
 
         {/* INFO */}
-        <div className="col s12 m7" style={{ padding: '2rem' }}>
-          <h5 className="teal-text text-darken-4">{t('hi')}</h5>
-          <p>
+        <div className="col s12 m8" style={{ padding: '0rem' }}>
+          <h3 className="typewriter teal-text text-darken-4">{t('hi')}</h3>
+          {/*   <h3 className="teal-text text-darken-4"></h3> */}
+          <p className='description-text'>
             Soy desarrolladora frontend con más de 4 años de experiencia, especializada en Angular, Ionic y Wordpress.
-            Vivo en Jesús María - Córdoba con mi pareja y mi hija de dos años. Me apasiona crear interfaces funcionales y accesibles.
+            Vivo en Jesús María - Córdoba con mi pareja y mi hija de dos años. Me apasiona crear interfaces funcionales, accesibles y simples.
             Me considero responsable, autodidacta y con muchas ganas de seguir creciendo. Estoy aprendiendo React y buscando nuevos desafíos.
           </p>
 
-         <Skills></Skills>
+          <Skills></Skills>
         </div>
       </div>
+
     </section>
+
   );
 }
 

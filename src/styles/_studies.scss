@@ -1,0 +1,141 @@
+@import "./variables";
+
+.timelineWrapper-studies {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  min-height: auto;
+  height: auto; 
+}
+
+.timelineContainer-studies {
+  position: relative;
+  max-width: 900px;
+  width: 100%;
+  margin: auto;
+  height: auto;          // ← importante
+  min-height: auto; 
+}
+
+/* ---- LÍNEAS ---- */
+
+/* Línea base (gris), va DETRÁS */
+.timelineLine-studies {
+  position: absolute;
+  left: 40px; // distancia desde la izquierda
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: #d3d3d3;
+  border-radius: 3px;
+  z-index: 1; // detrás de todo
+}
+
+/* Línea animada (violeta) encima de la gris */
+.timelineProgress-studies {
+  position: absolute;
+  left: 40px;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: $primary;
+  border-radius: 3px;
+  transform-origin: top;
+  z-index: 2;
+}
+
+/* ---- ITEMS ---- */
+
+.item-studies {
+  position: relative;
+  padding-left: 100px; // SEPARA LAS CARDS DE LA LÍNEA
+  margin-bottom: 80px;
+  z-index: 5; // cards encima de la línea
+}
+
+/* Punto */
+.point-studies {
+  position: absolute;
+  left: 26px;
+  top: 0px;
+  width: 30px;
+  height: 30px;
+  background: $accent;
+  border: 3px solid white;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  box-shadow: 0px 0px 4px $accent;
+}
+
+/* ---- CONTENIDO DE LA CARD ---- */
+
+.textContent-studies {
+  background: $light-bg;
+  padding: 1rem 2rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgb(0 0 0 / 13%);
+  border: 1px solid #ffb30084;
+}
+
+.title-studies {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0px;
+  color: $accent;
+  padding: 0px;
+}
+
+.company-studies {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: $primary;
+  margin: 0.5rem 0rem 0rem;
+}
+
+.period-studies {
+  font-size: 1rem;
+  color: $dark;
+  font-weight: 500;
+  margin: 0rem 0rem;
+}
+
+.description-studies {
+  font-size: 1.1rem;
+  color: $dark;
+  line-height: 1.5;
+  margin: 0.5rem 0rem;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .timelineWrapper-studies{
+    margin-bottom: 4rem;
+  }
+  .timelineContainer-studies {
+    width: 100%;
+  }
+
+  .timelineLine-studies,
+  .timelineProgress-studies {
+    left: 25px;
+  }
+
+  .point-studies {
+    left: 12px;
+  }
+
+  .title-studies {
+    font-size: 1.2rem;
+  }
+
+  .company-studies,
+  .period-studies {
+    font-size: 1rem;
+  }
+
+  .item-studies {
+    padding-left: 80px;
+  }
+}

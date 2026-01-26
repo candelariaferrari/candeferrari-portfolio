@@ -1,46 +1,18 @@
-/* import { NavLink } from "react-router-dom";
-import ThemeToggle from './ThemeToggle';
-import LanguageToggle from "./LanguageToggle";
-import "../styles/_navBar.scss";
-
-function Navbar() {
-
-  return (
-    <nav className="nav-wrapper dark-nav">
-      <div className="container">
-        <NavLink to="/">
-          <div className="logo left" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
-            <div className="logo-circle">CF</div>
-            <span style={{ fontWeight: '500', fontSize: '1.1rem' }}>Candelaria Ferrari</span>
-          </div>
-        </NavLink>
-
-        <ul className="right hide-on-med-and-down">
-          <li><NavLink to="/projects" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")} >Proyectos</NavLink></li>
-          <li><NavLink to="/contact" className={({ isActive }) => (isActive ? "nav-link active" : "nav-link")}>Contacto</NavLink></li>
-          <li><ThemeToggle /></li>
-          <LanguageToggle />
-        </ul>
-      </div>
-    </nav>
-  );
-}
-
-export default Navbar;
- */
-
 import { Link } from "react-router-dom";
 import { useTheme } from "../context/ThemeContext";
 import { useTranslation } from "react-i18next";
-import { FaGithub, FaLinkedin, FaMoon, FaSun } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaBars, FaTimes } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import "../styles/_navBar.scss";
 import ThemeToggle from "./ThemeToggle";
 import LanguageToggle from "./LanguageToggle";
+import { useState } from "react";
 
 const NavBar = () => {
-  const { theme, toggleTheme } = useTheme();
+  const { theme } = useTheme();
   const { t, i18n } = useTranslation();
+
+  const [open, setOpen] = useState(false);
 
   const toggleLanguage = () => {
     const newLang = i18n.language === "en" ? "es" : "en";
@@ -49,30 +21,54 @@ const NavBar = () => {
 
   return (
     <nav className={`navbar ${theme}`}>
+
+      {/* Left: Logo */}
       <div className="navbar-left">
         <NavLink to="/" className="logo">
           CF
         </NavLink>
-
       </div>
 
-      <div className="navbar-center">
+      {/* Desktop Menu */}
+      <div className={`navbar-center desktop`}>
         <NavLink to="/" end>{t("nav.home")}</NavLink>
         <NavLink to="/projects">{t("nav.projects")}</NavLink>
-        <NavLink to="/contact">{t("nav.contact")}</NavLink>
+        {/*  <NavLink to="/contact">{t("nav.contact")}</NavLink> */}
       </div>
 
-      <div className="navbar-right">
+      <div className={`navbar-right desktop`}>
         <a href="https://github.com/candelariaferrari" target="_blank" rel="noreferrer">
-          <FaGithub color={theme === "dark" ? "white" : "black"} />
+          <FaGithub />
         </a>
         <a href="https://www.linkedin.com/in/candelariaferrari/" target="_blank" rel="noreferrer">
-          <FaLinkedin color={theme === "dark" ? "white" : "black"} />
+          <FaLinkedin />
         </a>
-        <ThemeToggle/>
-        <LanguageToggle/>
+        <ThemeToggle />
+        <LanguageToggle />
       </div>
-    </nav>
+
+      {/* Mobile Menu Button */}
+      <button className="mobile-menu-btn" onClick={() => setOpen(!open)}>
+        {open ? <FaTimes /> : <FaBars />}
+      </button>
+
+      {/* Mobile Dropdown */}
+      <div className={`mobile-menu-full ${open ? "open" : ""}`}>
+        <NavLink to="/" end onClick={() => setOpen(false)}>
+          {t("nav.home")}
+        </NavLink>
+        <NavLink to="/projects" onClick={() => setOpen(false)}>
+          {t("nav.projects")}
+        </NavLink>
+
+        <a href="https://github.com/candelariaferrari" target="_blank" rel="noreferrer" className="a-mobile">GitHub</a>
+        <a href="https://www.linkedin.com/in/candelariaferrari/" target="_blank" rel="noreferrer" className="a-mobile">LinkedIn</a>
+        <ThemeToggle />
+        <LanguageToggle />
+
+      </div>
+    
+    </nav >
   );
 };
 
