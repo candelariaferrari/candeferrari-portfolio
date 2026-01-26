@@ -8,7 +8,7 @@ export const projects = [
     subtitle: "Frontend Developer · UI Implementer",
     description:
       "HTML5, SCSS, JavaScript/Framework, responsive design. Implementé la estructura visual y funcional completa de la landing page, desarrollando secciones clave como header, beneficios, llamados a la acción y footer. Realicé un diseño 100% responsive para mobile, tablet y desktop, aplicando buenas prácticas de CSS/SCSS para lograr una interfaz escalable y mantenible. Integré animaciones sutiles para mejorar la experiencia de usuario y optimicé el rendimiento para asegurar una web rápida y liviana, trabajando sobre un diseño previamente definido.",
-    type: "amarillo",
+    type: "landingAgrohub",
     image: landingAgrohub,
     cta: [{ label: "Ver proyecto", link: "https://www.agrohub.com.ar/inicio" }],
     align: "right",
