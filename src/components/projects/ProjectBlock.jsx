@@ -1,14 +1,16 @@
 import { transform } from "typescript";
 import styles from "./Projects.module.scss";
+import { useTranslation } from "react-i18next";
 
 const ProjectBlock = ({ project, position }) => {
+    const { t } = useTranslation();
   const tags = Array.isArray(project.tags) ? project.tags.join(" · ") : "";
 
   return (
     <div className={`${styles.projectBlock} ${styles[position]}`} >
       <div className={styles.text}>
-        <h3>{project.title}</h3>
-        <p>{project.description}</p>
+        <h3>{t(`${project.translationKey}.title`)}</h3>
+        <p> {t(`${project.translationKey}.description`)}</p>
 
         {project.cta && (
           <div className={styles.actions}>
@@ -20,7 +22,7 @@ const ProjectBlock = ({ project, position }) => {
                 target="_blank"
                 rel="noreferrer"
               >
-                {item.label} →
+                 {t(item.labelKey)} →
               </a>
             ))}
           </div>
@@ -31,7 +33,7 @@ const ProjectBlock = ({ project, position }) => {
         <div className={styles.imageWrapper}>
           <img src={project.image} alt={project.title} />
         </div>
-        <p className={styles.subtitle}>{project.subtitle}</p>
+        <p className={styles.subtitle}> {t(`${project.translationKey}.subtitle`)}</p>
       </div>
 
       {/*     <div className={styles.card}>

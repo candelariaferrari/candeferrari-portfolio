@@ -1,64 +1,81 @@
 {
- 
   "nav": {
     "home": "Inicio",
     "projects": "Proyectos",
     "contact": "Contacto"
   },
-  "about":{
+  "about": {
     "hi": "Hola, soy Cande!",
-    "description":"Soy desarrolladora frontend con más de 4 años de experiencia, especializada en Angular, Ionic y WordPress. Me apasiona crear interfaces funcionales, accesibles y simples, combinando desarrollo y diseño. Me considero una persona responsable, autodidacta y orientada al aprendizaje continuo. Actualmente estoy profundizando en React y buscando nuevos desafíos donde seguir creciendo profesionalmente.",
-    "frontend":"Frontend",
-    "tools":"Herramientas",
-    "desing":"Diseño",
-    "cms":"CMS",
-    "work-experience":"Experiencia laboral",
-    "academic-training":"Formación academica"
+    "description": "Soy desarrolladora frontend con más de 4 años de experiencia, especializada en Angular, Ionic y WordPress. Me apasiona crear interfaces funcionales, accesibles y simples, combinando desarrollo y diseño. Me considero una persona responsable, autodidacta y orientada al aprendizaje continuo. Actualmente estoy profundizando en React y buscando nuevos desafíos donde seguir creciendo profesionalmente.",
+    "frontend": "Frontend",
+    "tools": "Herramientas",
+    "desing": "Diseño",
+    "cms": "CMS",
+    "work-experience": "Experiencia laboral",
+    "academic-training": "Formación academica"
   },
-  "experience":{
-    "title-1":"Frontend Developer",
-    "company-1":"Agrohub",
-    "period-1":"Septiembre 2020 - December 2025",
-    "description-1":"Diseño y desarrollo de interfaces en Angular e Ionic, creando experiencias rápidas y escalables. Participación en el diseño UX/UI, optimización de performance y desarrollo de soluciones alineadas al negocio agro.",
-    "title-2":"Frontend Developer",
-    "company-2":"Pagos 360",
-    "period-2":"Abril 2022 - Septiembre 2022",
-    "description-2":"Desarrollo de interfaces web con Angular, maquetación de flujos, creación de landings SEO-friendly y optimización de accesibilidad.",
-    "title-3":"Tutora",
-    "company-3":"Coder House",
-    "period-3":"Abril 2020 - Octubre 2020",
-    "description-3":"Acompañamiento a estudiantes, corrección de proyectos, feedback técnico y guía de aprendizaje en HTML, CSS y JavaScript.",
-    "title-4":"Diseñadora Gráfica",
-    "company-4":"Combo Marketing y Diseño",
-    "period-4":"2019 - 2020",
-    "description-4":"Co-fundadora de estudio de diseño, branding, identidad visual y desarrollo de piezas digitales completas."
-
+  "experience": {
+    "title-1": "Frontend Developer",
+    "company-1": "Agrohub",
+    "period-1": "Septiembre 2020 - December 2025",
+    "description-1": "Diseño y desarrollo de interfaces en Angular e Ionic, creando experiencias rápidas y escalables. Participación en el diseño UX/UI, optimización de performance y desarrollo de soluciones alineadas al negocio agro.",
+    "title-2": "Frontend Developer",
+    "company-2": "Pagos 360",
+    "period-2": "Abril 2022 - Septiembre 2022",
+    "description-2": "Desarrollo de interfaces web con Angular, maquetación de flujos, creación de landings SEO-friendly y optimización de accesibilidad.",
+    "title-3": "Tutora",
+    "company-3": "Coder House",
+    "period-3": "Abril 2020 - Octubre 2020",
+    "description-3": "Acompañamiento a estudiantes, corrección de proyectos, feedback técnico y guía de aprendizaje en HTML, CSS y JavaScript.",
+    "title-4": "Diseñadora Gráfica",
+    "company-4": "Combo Marketing y Diseño",
+    "period-4": "2019 - 2020",
+    "description-4": "Co-fundadora de estudio de diseño, branding, identidad visual y desarrollo de piezas digitales completas."
   },
-  "studies":{
-    "title-1":"Angular: De cero a experto",
-    "company-1":"Udemy",
-    "period-1":"Agosto 2025",
-    "description-1":"Zoneless, Signals, Bindings, SSR, SSG, SEO, Testing, i18n, TanStack, Monorepos, NPM, Paquetes personalizados y más.",
-   
-    "title-2":"Full Stack",
-    "company-2":"Digital House",
-    "period-2":"Diciembre 2021 - Junio 2022",
-    "description-2":"Curso de programación Full Stack. Adquisición de conocimientos sobre Html, Css, React, JavaScript,Base de datos, Apis.",
-   
-    "title-3":"JavaScript",
-    "company-3":"Coder House",
-    "period-3":"Septiembre 2020 - Noviembre 2020",
-    "description-3":"Curso de JavaScript, utilidad de las librerías jQuery, técnicas de desarrollo para apps modernas con AJAX.",
-   
-    "title-4":"Desarrollo web",
-    "company-4":"Coder House",
-    "period-4":"Agosto 2019 - Diciembre 2019",
-    "description-4":"Curso de Desarrollo Web, adquisición de conocimientos sobre Html , Css, Scss,GitHub, Bootstrap.",
-   
-    "title-5":"Diseño Gráfica",
-    "company-5":"Universidad Blas Pascal",
-    "period-5":"2011 - 2015",
-    "description-5":"Licenciatura en Diseño Gráfico. Formación en comunicación visual, diseño editorial, identidad visual, tipografía, branding, composición, teoría del color, diseño digital y procesos creativos aplicados a medios gráficos y digitales."
-
+  "studies": {
+    "title-1": "Angular: De cero a experto",
+    "company-1": "Udemy",
+    "period-1": "Agosto 2025",
+    "description-1": "Zoneless, Signals, Bindings, SSR, SSG, SEO, Testing, i18n, TanStack, Monorepos, NPM, Paquetes personalizados y más.",
+    "title-2": "Full Stack",
+    "company-2": "Digital House",
+    "period-2": "Diciembre 2021 - Junio 2022",
+    "description-2": "Curso de programación Full Stack. Adquisición de conocimientos sobre Html, Css, React, JavaScript,Base de datos, Apis.",
+    "title-3": "JavaScript",
+    "company-3": "Coder House",
+    "period-3": "Septiembre 2020 - Noviembre 2020",
+    "description-3": "Curso de JavaScript, utilidad de las librerías jQuery, técnicas de desarrollo para apps modernas con AJAX.",
+    "title-4": "Desarrollo web",
+    "company-4": "Coder House",
+    "period-4": "Agosto 2019 - Diciembre 2019",
+    "description-4": "Curso de Desarrollo Web, adquisición de conocimientos sobre Html , Css, Scss,GitHub, Bootstrap.",
+    "title-5": "Diseño Gráfica",
+    "company-5": "Universidad Blas Pascal",
+    "period-5": "2011 - 2015",
+    "description-5": "Licenciatura en Diseño Gráfico. Formación en comunicación visual, diseño editorial, identidad visual, tipografía, branding, composición, teoría del color, diseño digital y procesos creativos aplicados a medios gráficos y digitales."
+  },
+  "projects": {
+    "title":"Proyectos",
+    "landing": {
+      "title": "Diseño y desarrollo de Landing",
+      "subtitle": "Frontend Developer · UI Implementer",
+      "description": "HTML5, SCSS, JavaScript/Framework, responsive design. Implementé la estructura visual y funcional completa de la landing page, desarrollando secciones clave como header, beneficios, llamados a la acción y footer. Realicé un diseño 100% responsive para mobile, tablet y desktop, aplicando buenas prácticas de CSS/SCSS para lograr una interfaz escalable y mantenible. Integré animaciones sutiles para mejorar la experiencia de usuario y optimicé el rendimiento para asegurar una web rápida y liviana, trabajando sobre un diseño previamente definido."
+    },
+    "rrss": {
+      "title": "Diseño Redes",
+      "subtitle": "RRSS · Contenido · Figma",
+      "description": "Diseñé en Figma una serie de publicaciones para Instagram, desarrollando piezas gráficas para feed orientadas a comunicación institucional, lanzamientos y contenido informativo. Trabajé la identidad visual, composición, tipografía y uso del color para lograr un feed coherente, moderno y alineado con la marca, presentado en un mockup interactivo de perfil."
+    },
+    "canva": {
+      "title": "Diseño - Animación",
+      "subtitle": "Canva",
+      "description": "Trabajé la estructura visual, equilibrio de composición, elección cromática y temporización de movimientos para lograr una pieza dinámica con fluidez en las transiciones."
+    },
+    "cta": {
+      "viewProject": "Ver proyecto",
+      "viewDesigns": "Ver diseños",
+      "demo": "Demo",
+      "github": "GitHub"
+    }
   }
 }

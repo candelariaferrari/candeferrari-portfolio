@@ -19,17 +19,14 @@
     "company-1": "Agrohub",
     "period-1": "September 2020 – Present",
     "description-1": "Design and development of interfaces using Angular and Ionic, creating fast and scalable experiences. Participation in UX/UI design, performance optimization, and development of solutions aligned with the agribusiness domain.",
-
     "title-2": "Frontend Developer",
     "company-2": "Pagos 360",
     "period-2": "April 2022 – September 2022",
     "description-2": "Web interface development with Angular, flow layout, creation of SEO-friendly landing pages, and accessibility optimization.",
-
     "title-3": "Tutor",
     "company-3": "Coder House",
     "period-3": "April 2020 – October 2020",
     "description-3": "Student mentoring, project reviews, technical feedback, and learning guidance in HTML, CSS, and JavaScript.",
-
     "title-4": "Graphic Designer",
     "company-4": "Combo Marketing y Diseño",
     "period-4": "2019 – 2020",
@@ -40,25 +37,45 @@
     "company-1": "Udemy",
     "period-1": "August 2025",
     "description-1": "Zoneless architecture, Signals, Bindings, SSR, SSG, SEO, Testing, i18n, TanStack, Monorepos, NPM, custom packages, and more.",
-
     "title-2": "Full Stack Development",
     "company-2": "Digital House",
     "period-2": "December 2021 – June 2022",
     "description-2": "Full Stack programming course covering HTML, CSS, React, JavaScript, databases, and APIs.",
-
     "title-3": "JavaScript",
     "company-3": "Coder House",
     "period-3": "September 2020 – November 2020",
     "description-3": "JavaScript course focused on jQuery libraries and development techniques for modern applications using AJAX.",
-
     "title-4": "Web Development",
     "company-4": "Coder House",
     "period-4": "August 2019 – December 2019",
     "description-4": "Web Development course covering HTML, CSS, SCSS, GitHub, and Bootstrap.",
-
     "title-5": "Graphic Design",
     "company-5": "Universidad Blas Pascal",
     "period-5": "2011 – 2015",
     "description-5": "Bachelor’s Degree in Graphic Design. Training in visual communication, editorial design, visual identity, typography, branding, composition, color theory, digital design, and creative processes applied to graphic and digital media."
+  },
+  "projects": {
+    "title":"Projects",
+    "landing": {
+      "title": "Landing Page Design & Development",
+      "subtitle": "Frontend Developer · UI Implementer",
+      "description": "HTML5, SCSS, JavaScript/Framework, responsive design. I implemented the complete visual and functional structure of the landing page, developing key sections such as header, benefits, call-to-action areas, and footer. I built a fully responsive layout for mobile, tablet, and desktop, applying CSS/SCSS best practices to ensure a scalable and maintainable interface. I also integrated subtle animations to enhance user experience and optimized performance to deliver a fast and lightweight website, working from a previously defined design."
+    },
+    "rrss": {
+      "title": "Social Media Design",
+      "subtitle": "Social Media · Content · Figma",
+      "description": "I designed a series of Instagram posts in Figma, creating visual content for the feed focused on institutional communication, product launches, and informational content. I worked on visual identity, composition, typography, and color usage to achieve a cohesive, modern feed aligned with the brand, presented in an interactive profile mockup."
+    },
+    "canva": {
+      "title": "Design – Animation",
+      "subtitle": "Canva",
+      "description": "I developed the visual structure, composition balance, color selection, and motion timing to create a dynamic piece with smooth and engaging transitions."
+    },
+    "cta": {
+      "viewProject": "View project",
+      "viewDesigns": "View designs",
+      "demo": "Demo",
+      "github": "GitHub"
+    }
   }
 }
