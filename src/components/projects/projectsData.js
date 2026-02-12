@@ -1,6 +1,8 @@
 import amarillo from "../../images/amarillo.png";
 import landingAgrohub from "../../images/landing-agrohub.png";
 import instagramAgrohub from "../../images/instagramAgrohub.png";
+import imagenCanva from "../../images/imagen-animacion-canva.png";
+
 export const projects = [
   {
     id: 1,
@@ -26,15 +28,15 @@ export const projects = [
   },
   {
     id: 3,
-    title: "App Frontend",
-    subtitle: "React · Angular · Ionic",
+    title: "Diseño - Animación",
+    subtitle: "Canva",
     description:
-      "Aplicación web con consumo de API y manejo de estados.",
-    type: "app",
-    image: amarillo,
+      "Trabajé la estructura visual, equilibrio de composición, elección cromática y temporización de movimientos para lograr una pieza dinámica con fluidez en las transiciones.",
+    type: "design",
+    image: imagenCanva,
     cta: [
-      { label: "Demo", link: "#" },
-      { label: "GitHub", link: "#" },
+      { label: "Demo", link: "https://www.canva.com/design/DAG_6426gPI/SRvcX9DmSCJn5DBT3N7dCA/watch?utm_content=DAG_6426gPI&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8d4690ba0d" },
+    /*   { label: "GitHub", link: "#" }, */
     ],
     align: "right",
   },

@@ -1,8 +1,64 @@
 {
-  "hi": "Hi, I'm Cande",
   "nav": {
     "home": "Home",
     "projects": "Projects",
     "contact": "Contact"
+  },
+  "about": {
+    "hi": "Hi, I'm Cande!",
+    "description": "I am a frontend developer with over 4 years of experience, specialized in Angular, Ionic, and WordPress. I am passionate about creating functional, accessible, and simple interfaces, combining development and design. I consider myself responsible, self-taught, and oriented toward continuous learning. I am currently deepening my knowledge of React and looking for new challenges to continue growing professionally.",
+    "frontend": "Frontend",
+    "tools": "Tools",
+    "desing": "Design",
+    "cms": "CMS",
+    "work-experience": "Work Experience",
+    "academic-training": "Academic Background"
+  },
+  "experience": {
+    "title-1": "Frontend Developer",
+    "company-1": "Agrohub",
+    "period-1": "September 2020 – Present",
+    "description-1": "Design and development of interfaces using Angular and Ionic, creating fast and scalable experiences. Participation in UX/UI design, performance optimization, and development of solutions aligned with the agribusiness domain.",
+
+    "title-2": "Frontend Developer",
+    "company-2": "Pagos 360",
+    "period-2": "April 2022 – September 2022",
+    "description-2": "Web interface development with Angular, flow layout, creation of SEO-friendly landing pages, and accessibility optimization.",
+
+    "title-3": "Tutor",
+    "company-3": "Coder House",
+    "period-3": "April 2020 – October 2020",
+    "description-3": "Student mentoring, project reviews, technical feedback, and learning guidance in HTML, CSS, and JavaScript.",
+
+    "title-4": "Graphic Designer",
+    "company-4": "Combo Marketing y Diseño",
+    "period-4": "2019 – 2020",
+    "description-4": "Co-founder of a design studio, working on branding, visual identity, and the development of complete digital assets."
+  },
+  "studies": {
+    "title-1": "Angular: From Zero to Expert",
+    "company-1": "Udemy",
+    "period-1": "August 2025",
+    "description-1": "Zoneless architecture, Signals, Bindings, SSR, SSG, SEO, Testing, i18n, TanStack, Monorepos, NPM, custom packages, and more.",
+
+    "title-2": "Full Stack Development",
+    "company-2": "Digital House",
+    "period-2": "December 2021 – June 2022",
+    "description-2": "Full Stack programming course covering HTML, CSS, React, JavaScript, databases, and APIs.",
+
+    "title-3": "JavaScript",
+    "company-3": "Coder House",
+    "period-3": "September 2020 – November 2020",
+    "description-3": "JavaScript course focused on jQuery libraries and development techniques for modern applications using AJAX.",
+
+    "title-4": "Web Development",
+    "company-4": "Coder House",
+    "period-4": "August 2019 – December 2019",
+    "description-4": "Web Development course covering HTML, CSS, SCSS, GitHub, and Bootstrap.",
+
+    "title-5": "Graphic Design",
+    "company-5": "Universidad Blas Pascal",
+    "period-5": "2011 – 2015",
+    "description-5": "Bachelor’s Degree in Graphic Design. Training in visual communication, editorial design, visual identity, typography, branding, composition, color theory, digital design, and creative processes applied to graphic and digital media."
   }
 }

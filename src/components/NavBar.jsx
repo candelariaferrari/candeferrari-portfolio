@@ -33,7 +33,7 @@ const NavBar = () => {
       <div className={`navbar-center desktop`}>
         <NavLink to="/" end>{t("nav.home")}</NavLink>
         <NavLink to="/projects">{t("nav.projects")}</NavLink>
-        {/*  <NavLink to="/contact">{t("nav.contact")}</NavLink> */}
+      {/*   <NavLink to="#contact">{t("nav.contact")}</NavLink> */}
       </div>
 
       <div className={`navbar-right desktop`}>

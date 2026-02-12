@@ -1,7 +1,10 @@
+@import "../../styles/variables";
+
+
 .projectsSection {
     padding: 0px 20px;
     max-width: 1100px;
-    margin: auto;
+    margin: 0rem auto 4rem;
 }
 
 .title {
@@ -10,21 +13,23 @@
     letter-spacing: 6px;
     font-weight: 600;
     position: relative;
+    color: var(--primary);
 }
 
 .underline {
     display: block;
     width: 60px;
     height: 3px;
-    background: #f2c94c;
+    background: var(--highlight);
     margin: 16px auto 0;
 }
 
 .projectsList {
-    margin-top: 80px;
     display: flex;
     flex-direction: column;
     gap: 120px;
+    width: 70%;
+    margin: 80px auto;
 }
 
 /* Bloque */
@@ -72,7 +77,7 @@
     p {
         margin: 10px 0;
         max-width: 420px;
-        color: #555;
+        color: var(--text-primary);
     }
 }
 
@@ -80,7 +85,7 @@
     display: block;
     margin-top: 4px;
     font-size: 14px;
-    color: #888;
+    color: red;
 }
 
 /* Botones */
@@ -93,62 +98,102 @@
 }
 
 .button {
-    border: 1px solid #ccc;
+    border: 1px solid var(--border);
     padding: 10px 18px;
-    border-radius: 8px;
     font-size: 14px;
     text-decoration: none;
-    color: #000 !important;
+    color: var(--text-primary);
     transition: all 0.3s ease;
     display: inline-block;
     padding: 10px 18px;
-    background-color: #f4b400;
-    color: #000;
+    background-color: var(--highlight);
     border-radius: 20px;
     text-decoration: none;
     font-weight: 500;
 
     &:hover {
-        background: #f5f5f5;
+        background-color: var(--surface);
         transform: translateY(-2px);
+        color: var(--highlight);
+        border-color: var(--primary);
     }
 }
 
 /* Card */
-.card {
+/* .card {
     border-radius: 20px;
     overflow: hidden;
-    background: #fdfdfd;
+    border: 0.5px solid var(--border);
+    background: var(--surface);
     box-shadow: 4px 4px 20px rgb(0 0 0 / 25%);
+    aspect-ratio: 16 / 10;
     //min-height: 290px;
 
     img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
+        object-fit: scale-down;
     }
-    .subtitle{
+
+    .subtitle {
         font-size: 1rem;
         font-weight: bold;
         margin-left: 1rem;
     }
-}
+ 
+} */
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 0.5px solid var(--border);
+    background: var(--surface);
+    box-shadow: 4px 4px 20px rgb(0 0 0 / 25%);
+  }
+  
+  /* Solo la imagen tiene ratio */
+  .imageWrapper {
+    aspect-ratio: 20 / 10;
+    overflow: hidden;
+  
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; // <-- mejor que scale-down
+      display: block;
+    }
+  }
+  
+  .subtitle {
+    padding: 1rem;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+  }
+  
 
 /* Mobile */
 @media (max-width: 768px) {
     .projectsSection {
-        padding: 0px;
-        width: 100vw;
+        padding: 0rem;
+        margin-bottom: 4rem !important;
+        transform: none;
+        overflow-x: hidden !important;
+        width: 100%;
+        min-height: 100%;
+        height: auto;
     }
+
     .projectBlock {
         grid-template-columns: 1fr;
         gap: 40px;
         transform: none;
-        margin: 0rem 2rem;
+        margin: 0rem 2rem 2rem;
     }
-    .projectsList{
+
+    .projectsList {
         gap: 50px;
+        width: 100%;
     }
+
     .right,
     .left {
 

@@ -3,6 +3,7 @@ import Experience from './experience';
 import StudiesTimeline from './Studies';
 import Footer from './Footer';
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 function About() {
   const titleVariants = {
     hidden: { opacity: 0, y: 30 },
@@ -12,6 +13,7 @@ function About() {
       transition: { duration: 0.6, ease: "easeOut" }
     }
   };
+   const { t } = useTranslation();
   return (
     <section className='section-body'>
       <AboutCard />
@@ -23,7 +25,7 @@ function About() {
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
         >
-          Experiencia Laboral
+         {t('about.work-experience')}
         </motion.h4>
 
         <Experience />
@@ -35,7 +37,7 @@ function About() {
           whileInView="visible"
           viewport={{ once: false, amount: 0.5 }}
         >
-          Formación academica
+          {t('about.academic-training')}
         </motion.h4>
       <StudiesTimeline />
       <Footer />

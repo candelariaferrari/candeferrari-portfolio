@@ -27,7 +27,7 @@
   top: 0;
   width: 3px;
   height: 100%;
-  background: $secondary;
+  background: var(--border);
   border-radius: 3px;
   z-index: 1; // detrás de todo
 }
@@ -39,7 +39,7 @@
   top: 0;
   width: 3px;
   height: 100%;
-  background: $primary;
+  background: var(--accent);
   border-radius: 3px;
   transform-origin: top;
   z-index: 2;
@@ -61,49 +61,49 @@
   top: 0px;
   width: 30px;
   height: 30px;
-  background: $primary;
-  border: 3px solid $light-bg;
+  background: var(--accent);
+  border: 3px solid var(--surface);
   border-radius: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  box-shadow: 0px 0px 4px $primary;
+  box-shadow: 0px 0px 4px var(--accent);
 }
 
 /* ---- CONTENIDO DE LA CARD ---- */
 
 .textContent {
-  background: $light-bg;
+  background: var(--bg);
   padding: 1rem 2rem;
   border-radius: 15px;
-  box-shadow: 0px 0px 4px $primary;
-  border: 1px solid #006064;
+  box-shadow: 0px 0px 4px var(--muted);
+  border: 1px solid var(--primary);
 }
 
 .title {
   font-size: 1.5rem;
   font-weight: 700;
   margin: 0px;
-  color: $accent;
+  color: var(--highlight);
   padding: 0px;
 }
 
 .company {
   font-size: 1.3rem;
   font-weight: 600;
-  color: $primary;
+  color: var(--primary);
   margin: 0.5rem 0rem 0rem;
 }
 
 .period {
   font-size: 1rem;
-  color: $dark;
+  color: var(--text-primary);
   font-weight: 500;
   margin: 0rem 0rem;
 }
 
 .description {
   font-size: 1.1rem;
-  color: $dark;
+  color: var(--text-primary);
   line-height: 1.5;
   margin: 0.5rem 0rem;
 }

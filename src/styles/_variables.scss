@@ -1,20 +1,46 @@
 
-$primary: #006064;  // verde petróleo
-$secondary: #CFD8DC; // gris claro
-$accent: #FFB300;  // mostaza
-$dark: #0f1516; //negro
-$dark-bg: #121212;
-$light-bg: #ffffff;
+:root {
+    /* LIGHT MODE */
+    --bg: #F9FAFB;
+    --surface: #FFFFFF;
+  
+    --primary: #0F3D3E;
+    --accent: #2E7D75;
+    --highlight: #E09F3E;
+    --highlight-opacity: #e09f3e7a;
 
-$text-dark: #F5F5F5;       // texto claro sobre fondo oscuro
-$text-light: #111111;      // texto oscuro sobre fondo claro
+    --border: #E5E7EB;
+    --muted: #6B7280;
+  
+    --text-primary: #1A1A1A;
+    --text-secondary: #4B5563;
 
-// modo claro
-$bg-light: $light-bg;
-$text-light-mode: $text-light;
-$nav-light: $secondary;
+    --nav-bg: rgba(255, 255, 255, 0.6);
+    --nav-blur: 10px;
+    --nav-border: var(--border);
+    --mobile-overlay: rgba(255, 255, 255, 0.75);
+    --shadow-soft: rgba(0, 0, 0, 0.15);
+  }
+  
+  body.dark {
+    /* DARK MODE */
+    --bg: #0E1113;
+    --surface: #161B1F;
+  
+    --primary: #3BA99C;
+    --accent: #3BA99C;
+    --highlight: #C6A84B;
+  
+    --border: #23272B;
+    --muted: #9CA3AF;
+  
+    --text-primary: #E6E6E6;
+    --text-secondary: #A1A1AA;
 
-// modo oscuro
-$bg-dark: $dark-bg;
-$text-dark-mode: $text-dark;
-$nav-dark: $dark-bg;
+    --nav-bg: rgba(22, 27, 31, 0.55);
+    --nav-blur: 18px;
+    --nav-border: rgba(255, 255, 255, 0.05);
+    --mobile-overlay: rgba(0, 0, 0, 0.7);
+    --shadow-soft: rgba(0, 0, 0, 0.4);
+  }
+  

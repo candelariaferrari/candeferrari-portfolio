@@ -2,120 +2,71 @@
 @import "./mixins";
 @import "./about";
 
+
 body {
-  transition: background-color 0.3s, color 0.3s;
-  margin: 0px;
-  padding: 0px;
+  background: var(--bg);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0;
+  padding: 0;
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   min-height: 100%;
-  height: auto;
-
 }
 
+/* Secciones */
 .section-body {
-  overflow-x: hidden !important;
   width: 100%;
   min-height: 100%;
-  height: auto; // <- ESTA ES LA CLAVE
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+/* Tipografías */
+h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
+  color: var(--primary);
 }
 
-//  MODO CLARO
-body.light {
-  background-color: $light-bg;
-  color: $text-light-mode;
 
-  .navbar {
-    background-color: $light-bg;
-    color: $text-light;
-  }
-
-  a {
-    color: $primary;
-  }
-
-  .footer-container {
-    background-color: $primary;
-    text-align: center;
-    padding: 2rem;
-    color: $accent;
-  }
+/* Links */
+a {
+  color: var(--accent);
 }
 
-//MODO OSCURO
-body.dark {
-  background-color: $bg-dark;
-  color: $text-dark-mode;
-
-  .navbar {
-    background-color: $nav-dark;
-    color: $text-dark;
-  }
-
-  a {
-    color: $accent;
-  }
-
-  .button-theme-color {
-    background-color: $light-bg;
-    color: $text-light;
-  }
-
-  .button-lang-toggle {
-    color: $text-dark;
-  }
-}
-
+/* Active nav */
 .active {
-  background-color: #FFB300;
-  color: #212121 !important;
+  background-color: var(--highlight);
+  color: var(--surface) !important;
 }
 
-.transition-line {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  background-color: #f9c642; // mostaza
-  z-index: 9999;
-  transform-origin: center;
-}
-
-
+/* Card */
 .card {
   @include soft-shadow;
   @include flex-center;
   @include transition(all);
 
-  padding: 1rem;
-  background-color: $light-bg;
-
-  @include respond-to(sm) {
-    flex-direction: column;
-  }
 }
 
+/* Timeline section */
 .background-color {
-  background-color: $accent;
-  padding: 2rem 0rem;
-  margin: 2rem 0rem;
- 
+  background-color: var(--surface);
+  padding: 2rem 0;
+  margin: 2rem 0;
 }
+
 .text-timeline {
-  color: $primary;
+  color: var(--primary);
   font-weight: 700;
   text-align: center;
-  padding: 1rem 0rem;
+  padding: 1rem 0;
 }
-/* Hide desktop menu in mobile */
-@media (max-width: 768px) {}
+/* Footer */
+.footer-container {
+  background-color: var(--primary);
+  text-align: center;
+  padding: 2rem;
+  color: var(--accent);
+}
+.dark .footer-container{
+  background-color: var(--surface) !important;
+ 
+}

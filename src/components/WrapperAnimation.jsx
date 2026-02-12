@@ -12,21 +12,17 @@ function WrapperAnimation({ children }) {
       {showLine && <TransitionLine />}
 
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
-        animate={{ opacity: 1, x: 50 }}
-        exit={{ opacity: 0, x: 100 }}
-        transition={{
-          duration: 0.4,
-          ease: "easeOut",
-          delay: 1.2, // espera a que termine la animación de las barras
-        }}
-        style={{
-          position: "relative",
-          zIndex: 10,
-        }}
-      >
-        {children}
-      </motion.div>
+  initial={{ opacity: 0 }}
+  animate={{ opacity: 1 }}
+  exit={{ opacity: 0 }}
+  transition={{
+    duration: 0.4,
+    ease: "easeOut",
+    delay: 1.2,
+  }}
+>
+  {children}
+</motion.div>
     </>
   );
 }

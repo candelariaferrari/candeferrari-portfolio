@@ -4,7 +4,7 @@ import ProjectBlock from "./ProjectBlock";
 
 export default function ProjectsSection() {
   return (
-    <section className={styles.projectsSection} id="projects">
+    <section className='projectsSection' id="projects">
       <h2 className={styles.title}>
         PROYECTOS
         <span className={styles.underline}></span>

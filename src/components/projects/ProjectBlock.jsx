@@ -27,11 +27,17 @@ const ProjectBlock = ({ project, position }) => {
         )}
 
       </div>
-
       <div className={styles.card}>
-        <img src={project.image} alt={project.title} />
+        <div className={styles.imageWrapper}>
+          <img src={project.image} alt={project.title} />
+        </div>
         <p className={styles.subtitle}>{project.subtitle}</p>
       </div>
+
+      {/*     <div className={styles.card}>
+        <img src={project.image} alt={project.title} />
+        <p className={styles.subtitle}>{project.subtitle}</p>
+      </div> */}
     </div>
   );
 };

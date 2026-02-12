@@ -1,36 +1,33 @@
 import React, { useRef, useEffect, useState } from "react";
 import { motion, useScroll, useMotionValueEvent  } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useTranslation } from "react-i18next";
 import "../styles/_experience.scss";
 
 const jobs = [
     {
-        title: "Frontend Developer",
-        company: "Agrohub",
-        period: "Septiembre 2020 - Actualidad",
-        description:
-            "Diseño y desarrollo de interfaces en Angular e Ionic, creando experiencias rápidas y escalables. Participación en el diseño UX/UI, optimización de performance y desarrollo de soluciones alineadas al negocio agro.",
+        titleKey: "experience.title-1",
+        company: "experience.company-1",
+        period: "experience.period-1",
+        description:"experience.description-1",
     },
     {
-        title: "Frontend Developer",
-        company: "Pagos 360",
-        period: "Abril 2022 - Septiembre 2022",
-        description:
-            "Desarrollo de interfaces web con Angular, maquetación de flujos, creación de landings SEO-friendly y optimización de accesibilidad.",
+        titleKey: "experience.title-2",
+        company: "experience.company-2",
+        period: "experience.period-3",
+        description:"experience.description-4",
+        },
+    {
+        titleKey: "experience.title-3",
+        company: "experience.company-3",
+        period: "experience.period-3",
+        description:"experience.description-3",
     },
     {
-        title: "Tutora",
-        company: "Coder House",
-        period: "Abril 2020 - Octubre 2020",
-        description:
-            "Acompañamiento a estudiantes, corrección de proyectos, feedback técnico y guía de aprendizaje en HTML, CSS y JavaScript.",
-    },
-    {
-        title: "Diseñadora Gráfica",
-        company: "Combo Marketing y Diseño",
-        period: "2019 - 2020",
-        description:
-            "Co-fundadora de estudio de diseño, branding, identidad visual y desarrollo de piezas digitales completas.",
+        titleKey: "experience.title-4",
+        company: "experience.company-4",
+        period: "experience.period-4",
+        description:"experience.description-4",
     },
 ];
 
@@ -94,6 +91,7 @@ const jobs = [
 }
 
 function TimelineItem({ job }) {
+    const { t } = useTranslation();
     const { ref, inView } = useInView({
         triggerOnce: false,
         threshold: 0.2,
@@ -116,10 +114,10 @@ function TimelineItem({ job }) {
             />
 
             <div className="textContent">
-                <h3 className="title">{job.title}</h3>
-                <h4 className="company">{job.company}</h4>
-                <p className="period">{job.period}</p>
-                <p className="description">{job.description}</p>
+                <h3 className="title">{t(job.titleKey)}</h3>
+                <h4 className="company">{t(job.company)}</h4>
+                <p className="period">{t(job.period)}</p>
+                <p className="description">{t(job.description)}</p>
             </div>
         </motion.div>
     );

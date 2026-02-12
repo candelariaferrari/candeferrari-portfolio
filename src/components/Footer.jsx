@@ -1,6 +1,6 @@
 function Footer() {
     return(
-        <section className="footer-container">
+        <section className="footer-container" id="contact">
          <p>@candeferrari</p>   
         </section>
     )

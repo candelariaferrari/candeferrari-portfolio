@@ -24,7 +24,7 @@ import {
 
 import flexboxLogo from "../images/flexbox.svg";
 import VScodeLogo from "../images/vscode.svg"
-
+import { useTranslation } from "react-i18next";
 
 import "../styles/_skills.scss";
 
@@ -73,11 +73,12 @@ export const skillsData = {
   ]
 };
 function Skills() {
+  const { t } = useTranslation();
   return (
     <section className="skills-section">
       <div className="skills-row single">
         <div className="skill-category">
-          <h4 className="skill-title">Frontend</h4>
+          <h4 className="skill-title">{t('about.frontend')}</h4>
           <div className="skills-grid">
             {skillsData.frontend.map((skill) => (
               <div key={skill.name} className="skill-item">
@@ -90,7 +91,7 @@ function Skills() {
       </div>
       <div className="skills-row multi">
         <div className="skill-category">
-          <h4 className="skill-title">Herramientas</h4>
+          <h4 className="skill-title">{t('about.tools')}</h4>
           <div className="skills-grid">
             {skillsData.tools.map((skill) => (
               <div key={skill.name} className="skill-item">
@@ -102,7 +103,7 @@ function Skills() {
         </div>
 
         <div className="skill-category">
-          <h4 className="skill-title">Diseño</h4>
+          <h4 className="skill-title">{t('about.desing')}</h4>
           <div className="skills-grid">
             {skillsData.design.map((skill) => (
               <div key={skill.name} className="skill-item">
@@ -114,7 +115,7 @@ function Skills() {
         </div>
 
         <div className="skill-category">
-          <h4 className="skill-title">CMS</h4>
+          <h4 className="skill-title">{t('about.cms')}</h4>
           <div className="skills-grid">
             {skillsData.cms.map((skill) => (
               <div key={skill.name} className="skill-item">

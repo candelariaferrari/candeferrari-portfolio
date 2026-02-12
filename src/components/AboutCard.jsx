@@ -26,12 +26,10 @@ function AboutCard() {
 
         {/* INFO */}
         <div className="col s12 m8" style={{ padding: '0rem' }}>
-          <h3 className="typewriter teal-text text-darken-4">{t('hi')}</h3>
+          <h3 className="typewriter teal-text text-darken-4">{t('about.hi')}</h3>
           {/*   <h3 className="teal-text text-darken-4"></h3> */}
           <p className='description-text'>
-            Soy desarrolladora frontend con más de 4 años de experiencia, especializada en Angular, Ionic y Wordpress.
-            Vivo en Jesús María - Córdoba con mi pareja y mi hija de dos años. Me apasiona crear interfaces funcionales, accesibles y simples.
-            Me considero responsable, autodidacta y con muchas ganas de seguir creciendo. Estoy aprendiendo React y buscando nuevos desafíos.
+           {t('about.description')}
           </p>
 
           <Skills></Skills>
