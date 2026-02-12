@@ -33,7 +33,7 @@ const NavBar = () => {
       <div className={`navbar-center desktop`}>
         <NavLink to="/" end>{t("nav.home")}</NavLink>
         <NavLink to="/projects">{t("nav.projects")}</NavLink>
-      {/*   <NavLink to="#contact">{t("nav.contact")}</NavLink> */}
+        {/*   <NavLink to="#contact">{t("nav.contact")}</NavLink> */}
       </div>
 
       <div className={`navbar-right desktop`}>
@@ -54,10 +54,11 @@ const NavBar = () => {
 
       {/* Mobile Dropdown */}
       <div className={`mobile-menu-full ${open ? "open" : ""}`}>
-        <NavLink to="/" end onClick={() => setOpen(false)}>
+
+          <NavLink to="/" end onClick={() => setOpen(false)} className="a-mobile">
           {t("nav.home")}
         </NavLink>
-        <NavLink to="/projects" onClick={() => setOpen(false)}>
+        <NavLink to="/projects" onClick={() => setOpen(false)} className="a-mobile">
           {t("nav.projects")}
         </NavLink>
 
@@ -67,7 +68,7 @@ const NavBar = () => {
         <LanguageToggle />
 
       </div>
-    
+
     </nav >
   );
 };
